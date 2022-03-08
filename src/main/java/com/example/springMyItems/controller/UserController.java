@@ -2,6 +2,7 @@ package com.example.springMyItems.controller;
 
 import com.example.springMyItems.entity.User;
 import com.example.springMyItems.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.Optional;
 @Controller
 public class UserController {
 
+    @Autowired
     private UserRepository userRepository;
 
     @GetMapping("/deleteUser/{id}")
